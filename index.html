@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Apparent Temperature Calculator</title>
+</head>
+<body>
+
+    <form id="calc" onsubmit="cal(); return false">
+        <label for="heading">Please input the required data.</label>
+
+        <br /><input type="number" name="temp" id="temp" placeholder="Air Temperature" step="any">
+        <select name="temp_diff" id="temp_diff">
+            <option value="cel">°Celsius</option>
+            <option value="fah">°Fahrenheit</option>
+            <option value="kel">Kelvin</option>
+        </select><br />
+
+        <br /><input type="number" name="speed" id="speed" placeholder="Wind Speed" step="any">
+        <select name="speed_diff" id="speed_diff">
+            <option value="m/s">Metres per Second</option>
+            <option value="km/h">Kilometres per Hour</option>
+            <option value="kts">Knots</option>
+            <option value="mph">Miles per Hour</option>
+        </select><br />
+
+        <br /><input type="number" name="rh" id="rh" placeholder="Relative Humidity" step="any">
+
+        <div class="result">
+            <br /><input type="submit" name="resultbutton" id="resultbtn" value="Submit"><br />
+            <span id="resContainer"></span>
+        </div>
+
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
